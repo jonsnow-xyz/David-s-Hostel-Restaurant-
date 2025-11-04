@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David's Hostel & Restaurant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b1c14;
+      color: #f4d06f;
+    }
+    header {
+      position: relative;
+      background: linear-gradient(rgba(11, 28, 20, 0.85), rgba(11, 28, 20, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    header img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #f4d06f;
+      margin: 0;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+    nav a {
+      color: #f4d06f;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f98b3c;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    .btn {
+      background-color: #f4d06f;
+      color: #0b1c14;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #f98b3c;
+      color: #fff;
+    }
+    footer {
+      background-color: #08140d;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #c5b46f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <img src="https://via.placeholder.com/180x180?text=LOGO" alt="David's Hostel & Restaurant logo" />
+    <h1>David's Hostel & Restaurant</h1>
+    <p>Luxury comfort in a tropical escape</p>
+    <a href="#rooms" class="btn">Explore Rooms</a>
+  </header>
+
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <p>Relax in our cozy, air-conditioned rooms designed for comfort and style. Perfect for backpackers and travelers seeking a premium stay experience in nature.</p>
+    <a href="#contact" class="btn">Book a Room</a>
+  </section>
+
+  <section id="restaurant" style="background-color:#12291d; color:#f4d06f;">
+    <h2>Restaurant</h2>
+    <p>Enjoy fresh local and international dishes made with love. From tropical breakfasts to evening cocktails by the sunset, we’ve got you covered.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Located in the heart of Cambodia’s coast<br>
+    📞 WhatsApp: +855 00 000 000<br>
+    🌐 <a href="#" style="color:#f98b3c; text-decoration:none;">Hostelworld Link</a></p>
+  </section>
+
+  <footer>
+    © 2025 David's Hostel & Restaurant. All rights reserved.
+  </footer>
+</body>
+</html>
