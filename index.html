@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>David's Hostel & Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--forest:#0b1c14;--forest-2:#092015;--gold:#f5d96f;--sun:#ff8b33;--muted:#bfb79b}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Montserrat,system-ui,Arial;background:linear-gradient(180deg,var(--forest) 0%, var(--forest-2) 100%);color:var(--gold);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    header{position:fixed;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:14px 36px;z-index:40;background:linear-gradient(180deg, rgba(11,28,20,0.0), rgba(11,28,20,0.25));backdrop-filter:blur(4px)}
+    .brand{display:flex;align-items:center;gap:12px;padding:6px 10px;border-radius:6px}
+    .brand h1{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);letter-spacing:0.6px;margin:0}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{font-weight:600;text-decoration:none;opacity:0.95}
+    nav a:hover{color:var(--sun)}
+
+    main{padding-top:92px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:64px 6% 40px}
+    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(245,217,111,0.04);color:var(--muted);font-size:13px;margin-bottom:16px}
+    .headline{font-family:'Playfair Display',serif;font-size:44px;line-height:1.02;margin-bottom:16px;color:var(--gold)}
+    .sub{font-size:18px;color:rgba(245,217,111,0.95);max-width:680px;margin-bottom:26px}
+    .cta{display:inline-block;background:var(--gold);color:#08140d;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(3,8,6,0.45);transition:transform .18s,background .18s}
+    .cta:hover{transform:translateY(-3px);background:var(--sun);color:white}
+
+    .logo-card{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(6,14,10,0.12), rgba(6,14,10,0.06));border-radius:18px;padding:28px;backdrop-filter:blur(3px);box-shadow:0 12px 40px rgba(3,8,6,0.6)}
+    .logo-card img{max-width:100%;height:auto;width:320px;transition:transform 1s ease}
+
+    /* about */
+    .about{display:flex;gap:36px;align-items:center;padding:56px 6%;flex-wrap:wrap}
+    .about .left{flex:1;min-width:260px}
+    .about h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:12px;color:var(--gold)}
+    .about p{color:var(--muted);max-width:640px;line-height:1.6}
+    .map{width:420px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.03);box-shadow:0 12px 36px rgba(3,8,6,0.55)}
+    .map img{display:block;width:100%;height:auto;filter:contrast(.95) saturate(.9)}
+
+    /* footer */
+    footer{padding:36px 6%;background:linear-gradient(180deg, rgba(6,10,8,0.9), rgba(6,10,8,0.98));margin-top:30px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .contacts{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .contacts a{color:var(--gold);text-decoration:none;padding:8px 10px;border-radius:8px;background:rgba(245,217,111,0.03)}
+
+    /* small screens */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;padding:100px 6% 20px}
+      .logo-card{order:-1;margin-bottom:14px}
+      .map{width:100%}
+      .headline{font-size:30px}
+    }
+
+    /* simple reveal */
+    .reveal{opacity:0;transform:translateY(12px);animation:reveal .7s ease forwards}
+    @keyframes reveal{to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>David's Hostel &amp; Restaurant</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left reveal" style="animation-delay:.05s">
+        <div class="kicker">Koh Rong — Longset Beach</div>
+        <h2 class="headline">Where nature, network, and nirvana collide.</h2>
+        <p class="sub">Every experience syncs — with immersive perfection. A boutique stay that balances calm island life with premium comfort and communal energy.</p>
+        <a class="cta" href="#rooms">Explore Rooms</a>
+      </div>
+
+      <div class="logo-card reveal" style="animation-delay:.12s">
+        <img src="l2.png" alt="David's Hostel & Restaurant logo">
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="left reveal" style="animation-delay:.08s">
+        <h3>Find us on Koh Rong</h3>
+        <p>David's Hostel & Restaurant sits on Longset Beach — the perfect base for island exploration. Below is our location and the map used on our business card.</p>
+      </div>
+      <div class="map reveal" style="animation-delay:.15s">
+        <img src="IMG_20251030_103204.jpg" alt="Koh Rong map">
+      </div>
+    </section>
+
+    <section id="rooms" style="padding:40px 6% 6px 6%">
+      <h3 style="font-family:'Playfair Display',serif;color:var(--gold);margin-bottom:10px">Rooms</h3>
+      <p style="color:var(--muted);max-width:900px">Comfort-forward rooms, clean linens, AC and great common areas. We’ll add photos and detailed descriptions for each room type next.</p>
+    </section>
+
+    <section id="restaurant" style="padding:30px 6% 6px 6%">
+      <h3 style="font-family:'Playfair Display',serif;color:var(--gold);margin-bottom:10px">Restaurant</h3>
+      <p style="color:var(--muted);max-width:900px">Local dishes and evening cocktails — crafted for guests and locals. Menu coming soon.</p>
+    </section>
+
+    <footer id="contact">
+      <div class="contacts">
+        <a href="mailto:davidalex007cam@gmail.com">📧 davidalex007cam@gmail.com</a>
+        <a href="https://www.hostelworld.com/pwa/hosteldetails.php/David-s-Hostel-Restaurant/Koh-Rong-Island/329237" target="_blank">🌐 View on Hostelworld</a>
+        <a href="https://maps.app.goo.gl/S4rrByAyvk4EGtEU6" target="_blank">📍 Find us on Google Maps</a>
+      </div>
+      <p style="margin-top:18px;color:var(--muted);font-size:13px">© 2025 David's Hostel &amp; Restaurant | Koh Rong Island, Cambodia</p>
+    </footer>
+  </main>
+</body>
+</html>
